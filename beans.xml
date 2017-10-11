@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="Person" class="se.codeCave.SpringCave.Person">
+		<constructor-arg value="Nisse"></constructor-arg>
+		<constructor-arg value="222"></constructor-arg>
+		<property name="taxId" value="23234"></property>
+		<property name="address" ref="Address"></property>
+	</bean>
+
+	<bean id="Address" class="se.codeCave.SpringCave.Address">
+		<constructor-arg value="kyrkan"></constructor-arg>
+		<constructor-arg value="1123 Nkoping"></constructor-arg>
+	</bean>
+</beans>
